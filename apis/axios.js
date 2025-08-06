@@ -1,9 +1,11 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-
-const BASE_URL = "http://localhost:1337/api";
-export const IMAGE_BASE_URL = "http://localhost:1337";
+// https://i-o-tech-backend-strapi.onrender.com/api/get-members
+const BASE_URL = "https://i-o-tech-backend-strapi.onrender.com/api"
+// "http://localhost:1337/api";
+export const IMAGE_BASE_URL = "https://i-o-tech-backend-strapi.onrender.com"
+// "http://localhost:1337";
 
 
 //192.168.29.22
