@@ -63,7 +63,6 @@ const OurTeam = () => {
   return (
     <section id="team" ref={teamRef} className="py-20 bg-gray-50">
       <div className="container mx-auto px-6">
-        {/* Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-800 mb-6">Our Team</h2>
           <p className="text-gray-600 text-lg max-w-2xl mx-auto leading-relaxed">
@@ -72,24 +71,19 @@ const OurTeam = () => {
           </p>
         </div>
 
-        {/* Team Slider Container */}
         {isLoading ? (
           <Loader />
         ) : (
           <div className="relative max-w-6xl mx-auto flex items-center px-4 sm:px-6 lg:px-8">
-            {/* Left Arrow */}
             <button onClick={prevSlide} disabled={currentIndex === 0} aria-label="Previous slide">
               <ChevronLeft />
             </button>
-
-            {/* Team Members Grid */}
             <div className="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mx-4">
               {getCurrentSlideMembers().map((member, idx) => (
                 <div
                   key={`${currentIndex}-${idx}`}
                   className="rounded-xl hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 text-center group"
                 >
-                  {/* Profile Image */}
                   <div className="relative mb-6 w-full h-48 mx-auto rounded-lg overflow-hidden shadow-md">
                     <Image
                       src={
@@ -105,7 +99,6 @@ const OurTeam = () => {
                     />
                   </div>
 
-                  {/* Member Info */}
                   <div className="mb-6">
                     <h3 className="text-xl font-semibold text-gray-800 mb-2">{member?.name}</h3>
                     <p className="text-gray-500 uppercase text-sm font-medium tracking-wide">{member?.role}</p>
@@ -141,7 +134,6 @@ const OurTeam = () => {
               ))}
             </div>
 
-            {/* Right Arrow */}
             <button
               onClick={nextSlide}
               disabled={currentIndex >= totalSlides - 1}

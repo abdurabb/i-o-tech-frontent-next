@@ -43,7 +43,6 @@ const Navbar = () => {
         } text-white fixed w-full z-50 transition-colors duration-300 px-4 py-3`}
     >
       <div className="flex justify-between items-center max-w-7xl mx-auto">
-        {/* Logo */}
         {isModalOpen ? (
           <div className="text-lg font-bold">
             <Image src="/logo.png" alt="LOGO" width={56} height={56} />
@@ -52,7 +51,6 @@ const Navbar = () => {
           <div className="text-lg font-bold" />
         )}
 
-        {/* Desktop Menu */}
         <ul className="hidden md:flex gap-8 items-center">
           <li>
             <a href="#home" className="hover:text-gray-300 transition-colors">
@@ -68,7 +66,6 @@ const Navbar = () => {
           <li>
             <button
               onClick={scrollToTeam}
-              // onClick={()=>{  scrollToTeam}}
               className="hover:text-gray-300 transition-colors hover:cursor-pointer"
             >
               Our Team
@@ -90,15 +87,12 @@ const Navbar = () => {
           </li>
         </ul>
 
-        {/* Right (Desktop) */}
         <div className="hidden md:flex items-center gap-4">
           <Search className="text-white cursor-pointer hover:text-gray-300 transition-colors" />
           <button className="bg-transparent border border-white text-white px-4 py-2 rounded hover:bg-white hover:text-[#441f13] transition-all duration-300">
             Book Appointment
           </button>
         </div>
-
-        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button onClick={() => setMenuOpen(!menuOpen)}>
             {menuOpen ? <Close /> : <Menu />}
@@ -106,7 +100,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && !isModalOpen && (
         <div className="md:hidden mt-4 space-y-4 bg-[#441f13] p-4 rounded">
           <ul className="flex flex-col gap-4">
@@ -159,7 +152,6 @@ const Navbar = () => {
         </div>
       )}
 
-      {/* Modal */}
       <Modal open={isModalOpen} onClose={() => dispatch(closeServiceModal())}>
         <ModalServices onClose={() => dispatch(closeServiceModal())} />
       </Modal>

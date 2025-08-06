@@ -57,10 +57,8 @@ const Testimonials = () => {
           </p>
         </div>
 
-        {/* Testimonial Content */}
         <div className="relative">
           <div className="flex flex-col md:flex-row gap-8 items-start">
-            {/* Client Image */}
             <div className="flex-shrink-0 relative w-64 h-80 rounded-lg overflow-hidden">
               <Image
                 src={currentTestimonial.image}
@@ -72,7 +70,6 @@ const Testimonials = () => {
               />
             </div>
 
-            {/* Testimonial Text */}
             <div className="flex-1 pt-4">
               <blockquote className="text-lg leading-relaxed mb-8 text-white/90">
                 &quot;{currentTestimonial.quote}&quot;
@@ -85,7 +82,6 @@ const Testimonials = () => {
             </div>
           </div>
 
-          {/* Navigation Arrows */}
           <div className="absolute bottom-0 right-0 flex gap-2">
             <button
               onClick={prevTestimonial}

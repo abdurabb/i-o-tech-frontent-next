@@ -1,7 +1,6 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-// https://i-o-tech-backend-strapi.onrender.com/api/get-members
 const BASE_URL = "https://i-o-tech-backend-strapi.onrender.com/api"
 // "http://localhost:1337/api";
 export const IMAGE_BASE_URL = "https://i-o-tech-backend-strapi.onrender.com"
@@ -40,4 +39,4 @@ export const apiService = {
   },
 };
 
-// export default { api, BASE_URL };
+

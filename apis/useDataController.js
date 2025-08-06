@@ -17,7 +17,7 @@ export const useGetServiceDetails = (id) =>
     queryFn: async () => {
       return await apiService.get(`/services123?filters[id][$eq]=${id}`);
     },
-    enabled: !!id, // to prevent fetch without id
+    enabled: !!id, 
     retry: 0,
   });
 
@@ -48,6 +48,6 @@ export const useGetContents = () =>
       queryFn: async () => {
         return await apiService.get(`/hero-contents?filters[id][$eq]=${id}`);
       },
-      enabled: !!id, // to prevent fetch without id
+      enabled: !!id, 
       retry: 0,
     });

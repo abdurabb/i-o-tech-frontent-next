@@ -35,5 +35,5 @@ export const {
   openServiceModal,
   closeServiceModal,
   setTeamInView,
-  setScrollTarget, // ✅ Export new action
+  setScrollTarget, 
 } = rootReducer.actions;

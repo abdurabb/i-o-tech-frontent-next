@@ -9,7 +9,6 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-center">
         
-        {/* Left Side - Navigation Links */}
         <div className="flex flex-wrap gap-8 text-sm mb-4 md:mb-0">
           <Link href="#about" className="text-white hover:text-gray-300 transition-colors">
             About
@@ -28,9 +27,7 @@ const Footer = () => (
           </Link>
         </div>
 
-        {/* Right Side - Contact Info and Social Icons */}
         <div className="flex items-center gap-6">
-          {/* Contact Buttons */}
           <div className="flex gap-2">
             <button className="bg-white text-[#4B2615] px-4 py-2 rounded text-sm font-medium hover:bg-gray-100 transition-colors">
               Email
@@ -39,11 +36,9 @@ const Footer = () => (
               Subscribe
             </button>
           </div>
-          
-          {/* Contacts Label */}
+
           <span className="text-sm text-white">Contacts</span>
           
-          {/* Social Icons */}
           <div className="flex gap-3">
             <a 
               href="#" 
@@ -71,8 +66,6 @@ const Footer = () => (
           </div>
         </div>
       </div>
-
-      {/* Bottom Copyright */}
       <div className="mt-6 text-center text-sm text-white border-t border-white/20 pt-4">
         © 2024. All rights reserved.
       </div>
