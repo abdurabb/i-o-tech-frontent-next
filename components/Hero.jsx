@@ -50,7 +50,7 @@ const Hero = () => {
             <div
               className="absolute inset-0 bg-cover bg-center transition-all duration-1000 ease-in-out"
               style={{
-                backgroundImage: `url('${IMAGE_BASE_URL}${data?.data[currentSlide].background?.url}')`,
+                backgroundImage: `url('${IMAGE_BASE_URL}${data?.data[currentSlide]?.background?.url}')`,
                 filter: "sepia(30%) saturate(80%) brightness(0.7)",
               }}
             >
@@ -59,18 +59,18 @@ const Hero = () => {
 
             <button
               onClick={prevSlide}
-              className="absolute left-6 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-orange-300 transition-colors duration-300 hover:cursor-pointer"
+              className="hidden md:block absolute left-6 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-orange-300 transition-colors duration-300 hover:cursor-pointer"
               aria-label="Previous slide"
             >
-              <ChevronLeft size={48} className="drop-shadow-lg" />
+              <ChevronLeft size={32} className="drop-shadow-lg" />
             </button>
 
             <button
               onClick={nextSlide}
-              className="absolute right-6 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-orange-300 transition-colors duration-300 hover:cursor-pointer"
+              className="hidden md:block absolute right-6 top-1/2 transform -translate-y-1/2 z-20 text-white hover:text-orange-300 transition-colors duration-300 hover:cursor-pointer"
               aria-label="Next slide"
             >
-              <ChevronRight size={48} className="drop-shadow-lg" />
+              <ChevronRight size={32} className="drop-shadow-lg" />
             </button>
 
             <div className="relative z-10 h-full flex items-center">
